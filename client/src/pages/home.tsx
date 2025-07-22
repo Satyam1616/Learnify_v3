@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import WhyChooseUnlox from "@/components/WhyChooseUnlox";
 import EduletSection from "@/components/EduletSection";
@@ -8,12 +8,10 @@ import SmartLabsSection from "@/components/SmartLabsSection";
 import PartnersSection from "@/components/PartnersSection";
 import AcademicPartnersSection from "@/components/AcademicPartnersSection";
 import MediaSection from "@/components/MediaSection";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
+    <Layout>
       <Hero />
       <WhyChooseUnlox />
       <EduletSection />
@@ -23,7 +21,6 @@ export default function Home() {
       <PartnersSection />
       <AcademicPartnersSection />
       <MediaSection />
-      <Footer />
-    </div>
+    </Layout>
   );
 }

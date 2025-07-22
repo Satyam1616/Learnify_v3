@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Users, BookOpen, Award, Star, ArrowRight } from "lucide-react";
+import Layout from "@/components/Layout";
 
 export default function JobBridgeProgramsPage() {
   const programs = [
@@ -61,7 +62,8 @@ export default function JobBridgeProgramsPage() {
   ];
 
   return (
-    <div className="pt-16">
+    <Layout>
+      <div className="pt-16">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-[hsl(219,79%,37%)] to-[hsl(217,91%,60%)] text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -198,6 +200,7 @@ export default function JobBridgeProgramsPage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </Layout>
   );
 }

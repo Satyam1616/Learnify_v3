@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Phone, Mail, MapPin, Clock, MessageCircle, Headphones } from "lucide-react";
+import Layout from "@/components/Layout";
+import ContactForm from "@/components/ContactForm";
 
 export default function ContactUsPage() {
   const contactInfo = [
@@ -69,7 +68,8 @@ export default function ContactUsPage() {
   ];
 
   return (
-    <div className="pt-16">
+    <Layout>
+      <div className="pt-16">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-green-600 to-teal-600 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -165,80 +165,7 @@ export default function ContactUsPage() {
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8">
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-                    <Input 
-                      type="text" 
-                      placeholder="Enter your first name"
-                      className="w-full"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                    <Input 
-                      type="text" 
-                      placeholder="Enter your last name"
-                      className="w-full"
-                    />
-                  </div>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                  <Input 
-                    type="email" 
-                    placeholder="Enter your email address"
-                    className="w-full"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                  <Input 
-                    type="tel" 
-                    placeholder="Enter your phone number"
-                    className="w-full"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Program Interest</label>
-                  <Select>
-                    <SelectTrigger className="w-full">
-                      <SelectValue placeholder="Select a program" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="job-bridge">Job Bridge Programs</SelectItem>
-                      <SelectItem value="global-internship">Global Internship</SelectItem>
-                      <SelectItem value="edu-let">Edu-let Tablet</SelectItem>
-                      <SelectItem value="general">General Inquiry</SelectItem>
-                      <SelectItem value="partnership">Partnership</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                  <Textarea 
-                    placeholder="Tell us more about your inquiry or how we can help you..."
-                    rows={5}
-                    className="w-full"
-                  />
-                </div>
-                
-                <Button className="w-full bg-green-600 text-white py-4 text-lg font-semibold hover:bg-green-700">
-                  Send Message
-                </Button>
-                
-                <p className="text-sm text-gray-600 text-center">
-                  By submitting this form, you agree to our 
-                  <span className="text-green-600 font-semibold"> Privacy Policy</span>.
-                </p>
-              </form>
-            </div>
+            <ContactForm />
           </div>
         </div>
       </section>
@@ -348,6 +275,7 @@ export default function ContactUsPage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </Layout>
   );
 }

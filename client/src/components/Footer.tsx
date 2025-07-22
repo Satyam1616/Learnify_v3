@@ -1,4 +1,5 @@
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import NewsletterForm from "./NewsletterForm";
 
 export default function Footer() {
   return (
@@ -66,6 +67,8 @@ export default function Footer() {
               <li><a href="#" className="text-gray-300 hover:text-white hover:translate-x-2 transition-all duration-300 block">EDU-LET</a></li>
             </ul>
           </div>
+          
+          <NewsletterForm />
         </div>
         
         <div className="border-t border-gray-700 mt-12 pt-8 text-center animate-fade-in" style={{ animationDelay: '0.8s' }}>

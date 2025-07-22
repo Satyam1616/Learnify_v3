@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Tablet, Wifi, BookOpen, Clock, Shield, Headphones } from "lucide-react";
+import Layout from "@/components/Layout";
 
 export default function EduLetPage() {
   const features = [
@@ -56,7 +57,8 @@ export default function EduLetPage() {
   ];
 
   return (
-    <div className="pt-16">
+    <Layout>
+      <div className="pt-16">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-900 to-indigo-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -276,6 +278,7 @@ export default function EduLetPage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </Layout>
   );
 }

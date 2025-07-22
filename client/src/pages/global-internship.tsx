@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Globe, Star, Users, Award } from "lucide-react";
+import Layout from "@/components/Layout";
 
 export default function GlobalInternshipPage() {
   const countries = [
@@ -85,7 +86,8 @@ export default function GlobalInternshipPage() {
   ];
 
   return (
-    <div className="pt-16">
+    <Layout>
+      <div className="pt-16">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-purple-900 to-blue-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -255,6 +257,7 @@ export default function GlobalInternshipPage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </Layout>
   );
 }
