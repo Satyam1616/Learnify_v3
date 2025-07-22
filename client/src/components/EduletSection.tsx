@@ -2,58 +2,56 @@ import { Button } from "@/components/ui/button";
 
 export default function EduletSection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 to-blue-900 text-white relative overflow-hidden">
-      {/* Background decorative tablets */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-32 h-48 bg-white rounded-lg transform rotate-12"></div>
-        <div className="absolute bottom-20 right-20 w-28 h-40 bg-white rounded-lg transform -rotate-6"></div>
-      </div>
-      
+    <section className="py-20 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="space-y-6">
               <div className="animate-slide-up">
-                <h2 className="text-4xl lg:text-6xl font-black leading-tight tracking-wider">
-                  <span className="block">INDIA'S</span>
-                  <span className="block">FIRST</span>
-                  <span className="block">EDUCATIONAL</span>
-                  <span className="block">TABLET</span>
+                <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 leading-tight mb-4">
+                  <span className="text-black">Edu-let - </span>
+                  <span className="text-[hsl(219,79%,37%)]">India's First<br />
+                  Educational Tablet</span>
                 </h2>
               </div>
               
-              <div className="animate-slide-up" style={{ animationDelay: '0.3s' }}>
-                <h3 className="text-3xl lg:text-4xl font-bold text-blue-300 mb-2">
-                  Edu-let
-                </h3>
-                <h4 className="text-2xl font-bold text-blue-200">
-                  - India's First Educational Tablet
-                </h4>
-              </div>
-              
-              <p className="text-xl text-gray-300 leading-relaxed animate-slide-up" style={{ animationDelay: '0.6s' }}>
+              <p className="text-lg text-gray-600 leading-relaxed animate-slide-up" style={{ animationDelay: '0.3s' }}>
                 Every Unlox learner receives a dedicated education tablet, providing seamless, distraction-free learning. With 24/7 access to course materials, Unlox Academy's tablet ensures enhanced focus and immersive engagement, redefining the future of online education.
               </p>
             </div>
             
-            <Button className="bg-white text-gray-900 px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 animate-scale-in" style={{ animationDelay: '0.9s' }}>
+            <Button className="bg-[hsl(219,79%,37%)] text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-[hsl(217,91%,60%)] transform hover:scale-105 transition-all duration-300 animate-scale-in" style={{ animationDelay: '0.6s' }}>
               Learn More
             </Button>
           </div>
           
           <div className="relative animate-float">
-            <div className="relative z-10">
-              <img 
-                src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-                alt="Educational tablet with learning interface" 
-                className="rounded-2xl shadow-2xl w-full h-auto transform hover:scale-105 transition-transform duration-500" 
-              />
-              <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl opacity-20 blur-xl"></div>
+            <div className="relative z-10 bg-black rounded-3xl p-8 shadow-2xl">
+              {/* Tablet mockup */}
+              <div className="bg-gray-900 rounded-2xl p-4">
+                {/* First tablet screen - blue with hands */}
+                <div className="bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl p-6 mb-4 relative min-h-[200px] flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-white rounded-full mx-auto mb-4 flex items-center justify-center">
+                      <div className="w-0 h-0 border-l-6 border-r-6 border-b-8 border-transparent border-b-white"></div>
+                    </div>
+                    <p className="text-white text-sm font-medium">Interactive Learning</p>
+                  </div>
+                  {/* Hands holding tablet representation */}
+                  <div className="absolute bottom-0 left-4 right-4 h-12 bg-gradient-to-t from-orange-200 to-transparent rounded-b-xl opacity-50"></div>
+                </div>
+                
+                {/* Second tablet screen - dark with UNLOX branding */}
+                <div className="bg-gray-800 rounded-xl p-6 relative min-h-[200px] flex flex-col items-center justify-center">
+                  <div className="text-white text-2xl font-bold mb-2">11:36</div>
+                  <div className="text-white text-xl font-bold mb-4">UNLOX</div>
+                  <div className="w-12 h-12 border-2 border-gray-400 rounded-full flex items-center justify-center">
+                    <div className="w-6 h-6 bg-gray-400 rounded-full"></div>
+                  </div>
+                  <div className="text-gray-400 text-xs mt-2">Unlox Academy</div>
+                </div>
+              </div>
             </div>
-            
-            {/* Floating elements around tablet */}
-            <div className="absolute -top-8 -right-8 w-16 h-16 bg-blue-400 rounded-full opacity-60 animate-bounce-slow"></div>
-            <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-yellow-400 rounded-full opacity-60 animate-bounce-slow" style={{ animationDelay: '1s' }}></div>
           </div>
         </div>
       </div>
