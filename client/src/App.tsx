@@ -17,6 +17,13 @@ import DigitalMarketing from "@/pages/job-bridge/digital-marketing";
 import DataScience from "@/pages/job-bridge/data-science";
 import DroneEngineering from "@/pages/job-bridge/drone-engineering";
 import UIUXDesign from "@/pages/job-bridge/ui-ux-design";
+import Careers from "@/pages/careers";
+import Blog from "@/pages/blog";
+import HelpCenter from "@/pages/help-center";
+import PrivacyPolicy from "@/pages/privacy-policy";
+import TermsOfService from "@/pages/terms-of-service";
+import ELearningCourses from "@/pages/e-learning-courses";
+import ResearchPaper from "@/pages/research-paper";
 
 function Router() {
   return (
@@ -34,6 +41,14 @@ function Router() {
       <Route path="/job-bridge/data-science" component={DataScience} />
       <Route path="/job-bridge/drone-engineering" component={DroneEngineering} />
       <Route path="/job-bridge/ui-ux-design" component={UIUXDesign} />
+      {/* Additional Pages */}
+      <Route path="/careers" component={Careers} />
+      <Route path="/blog" component={Blog} />
+      <Route path="/help-center" component={HelpCenter} />
+      <Route path="/privacy-policy" component={PrivacyPolicy} />
+      <Route path="/terms-of-service" component={TermsOfService} />
+      <Route path="/e-learning-courses" component={ELearningCourses} />
+      <Route path="/research-paper" component={ResearchPaper} />
       <Route component={NotFound} />
     </Switch>
   );

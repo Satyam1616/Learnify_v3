@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Users, BookOpen, Award, Star, ArrowRight } from "lucide-react";
 import Layout from "@/components/Layout";
-import { useNavigate } from "react-router-dom";
+import { useLocation } from "wouter";
 
 export default function JobBridgeProgramsPage() {
-  const navigate = useNavigate();
+  const [, setLocation] = useLocation();
   const programs = [
     {
       title: "Artificial Intelligence",
@@ -147,10 +147,10 @@ export default function JobBridgeProgramsPage() {
                   key={index}
                   className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow animate-scale-in group"
                   style={{ animationDelay: `${index * 0.1}s` }}
-                  onClick={() => navigate(`/job-bridge/${program.slug}`)}
+                  onClick={() => setLocation(`/job-bridge/${program.slug}`)}
                   role="button"
                   tabIndex={0}
-                  onKeyPress={e => { if (e.key === 'Enter') navigate(`/job-bridge/${program.slug}`); }}
+                  onKeyPress={e => { if (e.key === 'Enter') setLocation(`/job-bridge/${program.slug}`); }}
                 >
                   <div className="relative overflow-hidden">
                     <img
@@ -184,7 +184,7 @@ export default function JobBridgeProgramsPage() {
 
                     <Button
                       className="w-full bg-[hsl(219,79%,37%)] text-white hover:bg-[hsl(217,91%,60%)] group"
-                      onClick={e => { e.stopPropagation(); navigate(`/job-bridge/${program.slug}`); }}
+                      onClick={e => { e.stopPropagation(); setLocation(`/job-bridge/${program.slug}`); }}
                     >
                       Enroll Now
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
