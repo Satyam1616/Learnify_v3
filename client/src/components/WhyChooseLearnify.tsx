@@ -37,7 +37,7 @@ export default function WhyChooseLearnify() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 gap-y-8 mb-10 sm:mb-16 w-full">
           {/* Feature 1 */}
-          <div className="bg-white rounded-3xl p-6 sm:p-8 text-center shadow-lg hover:shadow-xl transition-shadow animate-scale-in group">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 text-center shadow-lg hover-lift animate-scale-in group">
             <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-[hsl(219,79%,37%)] transition-colors">
               <Brain className="h-7 w-7 sm:h-8 sm:w-8 text-gray-600 group-hover:text-white transition-colors" />
             </div>
@@ -48,7 +48,7 @@ export default function WhyChooseLearnify() {
           </div>
 
           {/* Feature 2 */}
-          <div className="bg-white rounded-3xl p-6 sm:p-8 text-center shadow-lg hover:shadow-xl transition-shadow animate-scale-in group" style={{ animationDelay: '0.2s' }}>
+          <div className="bg-white rounded-3xl p-6 sm:p-8 text-center shadow-lg hover-lift animate-scale-in group" style={{ animationDelay: '0.2s' }}>
             <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-[hsl(219,79%,37%)] transition-colors">
               <Users className="h-7 w-7 sm:h-8 sm:w-8 text-gray-600 group-hover:text-white transition-colors" />
             </div>
@@ -59,7 +59,7 @@ export default function WhyChooseLearnify() {
           </div>
 
           {/* Feature 3 */}
-          <div className="bg-white rounded-3xl p-6 sm:p-8 text-center shadow-lg hover:shadow-xl transition-shadow animate-scale-in group" style={{ animationDelay: '0.4s' }}>
+          <div className="bg-white rounded-3xl p-6 sm:p-8 text-center shadow-lg hover-lift animate-scale-in group" style={{ animationDelay: '0.4s' }}>
             <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-[hsl(219,79%,37%)] transition-colors">
               <GitBranch className="h-7 w-7 sm:h-8 sm:w-8 text-gray-600 group-hover:text-white transition-colors" />
             </div>

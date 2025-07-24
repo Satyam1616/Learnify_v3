@@ -62,7 +62,7 @@ export default function Footer() {
           </div>
           <NewsletterForm />
         </div>
-        <div className="border-t border-gray-300 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center animate-fade-in" style={{ animationDelay: '0.8s' }}>
+        <div className="border-t border-gray-300 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
           <p className="text-gray-700 text-sm sm:text-lg">
             © 2025 LEARNIFY. All rights reserved. <span className="gradient-text font-semibold text-blue-700">Learning Made Easy.</span>
           </p>

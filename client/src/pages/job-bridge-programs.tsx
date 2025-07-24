@@ -115,8 +115,8 @@ export default function JobBridgeProgramsPage() {
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow animate-scale-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className="bg-white rounded-2xl p-8 text-center shadow-lg hover-lift animate-scale-in"
+                  style={{ animationDelay: `${index * 0.15}s` }}
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-[hsl(219,79%,37%)] to-[hsl(217,91%,60%)] rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <benefit.icon className="h-8 w-8 text-white" />
@@ -145,8 +145,8 @@ export default function JobBridgeProgramsPage() {
               {programs.map((program, index) => (
                 <div
                   key={index}
-                  className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow animate-scale-in group"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                                      className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-lg hover-lift animate-scale-in group"
+                    style={{ animationDelay: `${index * 0.15}s` }}
                   onClick={() => setLocation(`/job-bridge/${program.slug}`)}
                   role="button"
                   tabIndex={0}
@@ -156,7 +156,7 @@ export default function JobBridgeProgramsPage() {
                     <img
                       src={program.image}
                       alt={program.title}
-                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                                              className="w-full h-48 object-cover group-hover:scale-105 smooth-transition"
                     />
                     <div className="absolute top-4 right-4">
                       <div className="bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-semibold text-gray-900">
