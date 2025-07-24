@@ -1,4 +1,4 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, useLocation } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -10,6 +10,13 @@ import EduLet from "@/pages/edu-let";
 import AboutUs from "@/pages/about-us";
 import ContactUs from "@/pages/contact-us";
 import NotFound from "@/pages/not-found";
+import { useEffect } from "react";
+import WebDevelopment from "@/pages/job-bridge/web-development";
+import ArtificialIntelligence from "@/pages/job-bridge/artificial-intelligence";
+import DigitalMarketing from "@/pages/job-bridge/digital-marketing";
+import DataScience from "@/pages/job-bridge/data-science";
+import DroneEngineering from "@/pages/job-bridge/drone-engineering";
+import UIUXDesign from "@/pages/job-bridge/ui-ux-design";
 
 function Router() {
   return (
@@ -20,12 +27,23 @@ function Router() {
       <Route path="/edu-let" component={EduLet} />
       <Route path="/about-us" component={AboutUs} />
       <Route path="/contact-us" component={ContactUs} />
+      {/* Job Bridge Course Pages */}
+      <Route path="/job-bridge/web-development" component={WebDevelopment} />
+      <Route path="/job-bridge/artificial-intelligence" component={ArtificialIntelligence} />
+      <Route path="/job-bridge/digital-marketing" component={DigitalMarketing} />
+      <Route path="/job-bridge/data-science" component={DataScience} />
+      <Route path="/job-bridge/drone-engineering" component={DroneEngineering} />
+      <Route path="/job-bridge/ui-ux-design" component={UIUXDesign} />
       <Route component={NotFound} />
     </Switch>
   );
 }
 
 function App() {
+  const [location] = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>

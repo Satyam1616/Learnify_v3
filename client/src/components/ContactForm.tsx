@@ -26,7 +26,7 @@ export default function ContactForm() {
   const { toast } = useToast();
 
   const contactMutation = useMutation({
-    mutationFn: (data: ContactFormData) => 
+    mutationFn: (data: ContactFormData) =>
       apiRequest("/api/contact", "POST", data),
     onSuccess: () => {
       toast({
@@ -52,7 +52,7 @@ export default function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validation
     if (!formData.fullName.trim() || !formData.email.trim() || !formData.phoneNumber.trim() || !formData.programInterest || !formData.message.trim()) {
       toast({
@@ -84,11 +84,11 @@ export default function ContactForm() {
   return (
     <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8">
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
-            <Input 
-              type="text" 
+            <Input
+              type="text"
               placeholder="Enter your full name"
               value={formData.fullName}
               onChange={(e) => updateFormData("fullName", e.target.value)}
@@ -98,8 +98,8 @@ export default function ContactForm() {
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
-            <Input 
-              type="tel" 
+            <Input
+              type="tel"
               placeholder="Enter your phone number"
               value={formData.phoneNumber}
               onChange={(e) => updateFormData("phoneNumber", e.target.value)}
@@ -108,11 +108,11 @@ export default function ContactForm() {
             />
           </div>
         </div>
-        
+
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
-          <Input 
-            type="email" 
+          <Input
+            type="email"
             placeholder="Enter your email address"
             value={formData.email}
             onChange={(e) => updateFormData("email", e.target.value)}
@@ -120,11 +120,11 @@ export default function ContactForm() {
             disabled={contactMutation.isPending}
           />
         </div>
-        
+
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">Programs Interested In *</label>
-          <Select 
-            value={formData.programInterest} 
+          <Select
+            value={formData.programInterest}
             onValueChange={(value) => updateFormData("programInterest", value)}
             disabled={contactMutation.isPending}
           >
@@ -140,10 +140,10 @@ export default function ContactForm() {
             </SelectContent>
           </Select>
         </div>
-        
+
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">Messages *</label>
-          <Textarea 
+          <Textarea
             placeholder="Write your message..."
             rows={5}
             value={formData.message}
@@ -152,8 +152,8 @@ export default function ContactForm() {
             disabled={contactMutation.isPending}
           />
         </div>
-        
-        <Button 
+
+        <Button
           type="submit"
           className="w-full bg-[hsl(219,79%,37%)] text-white py-4 text-lg font-semibold hover:bg-[hsl(217,91%,60%)]"
           disabled={contactMutation.isPending}

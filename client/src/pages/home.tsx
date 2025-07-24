@@ -7,7 +7,7 @@ import LearningModules from "@/components/LearningModules";
 import SmartLabsSection from "@/components/SmartLabsSection";
 import PartnersSection from "@/components/PartnersSection";
 import AcademicPartnersSection from "@/components/AcademicPartnersSection";
-import MediaSection from "@/components/MediaSection";
+import MediaSection, { ContactFormSection } from "@/components/MediaSection";
 
 export default function Home() {
   return (
@@ -21,6 +21,7 @@ export default function Home() {
       <PartnersSection />
       <AcademicPartnersSection />
       <MediaSection />
+      <ContactFormSection />
     </Layout>
   );
 }
