@@ -18,7 +18,7 @@ export default function PartnersSection() {
         </div>
 
         {/* First row - left to right */}
-        <div className="overflow-x-auto mb-4 sm:mb-8">
+        <div className="overflow-hidden mb-4 sm:mb-8">
           <div className="flex animate-scroll space-x-4 sm:space-x-8">
             {companies.concat(companies).map((company, index) => (
               <div
@@ -34,7 +34,7 @@ export default function PartnersSection() {
         </div>
 
         {/* Second row - right to left */}
-        <div className="overflow-x-auto">
+        <div className="overflow-hidden">
           <div className="flex animate-scroll-reverse space-x-4 sm:space-x-8">
             {companies.concat(companies).map((company, index) => (
               <div

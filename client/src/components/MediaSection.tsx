@@ -30,7 +30,7 @@ export default function MediaSection() {
         </div>
 
         {/* Infinite scroll row */}
-        <div className="overflow-x-auto mb-4 sm:mb-8">
+        <div className="overflow-hidden mb-4 sm:mb-8">
           <div className="flex animate-scroll space-x-4 sm:space-x-8">
             {mediaOutlets.concat(mediaOutlets).map((outlet, index) => (
               <div

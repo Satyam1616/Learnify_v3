@@ -68,6 +68,11 @@
     will-change: transform;
   }
 
+  .animate-scroll-reverse {
+    animation: scrollReverse 30s linear infinite;
+    will-change: transform;
+  }
+
   .animate-float {
     animation: float 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     will-change: transform;
@@ -155,9 +160,17 @@
   0% {
     transform: translateX(0);
   }
-
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@keyframes scrollReverse {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 
