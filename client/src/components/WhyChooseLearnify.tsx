@@ -1,7 +1,7 @@
 import { Brain, Users, GitBranch } from "lucide-react";
 import { useEffect, useState } from "react";
 
-export default function WhyChooseUnlox() {
+export default function WhyChooseLearnify() {
   const [circles, setCircles] = useState<Array<{ id: number, x: number, y: number, size: number, delay: number }>>([]);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ export default function WhyChooseUnlox() {
 
       <div className="w-full px-4 md:max-w-7xl md:mx-auto md:px-6 lg:px-8 relative z-10 flex flex-col items-center justify-center">
         <div className="text-center mb-10 sm:mb-16">
-          <span className="text-[hsl(219,79%,37%)] font-medium text-base sm:text-lg mb-4 block tracking-wide">Why Choose Unlox?</span>
+                          <span className="text-[hsl(219,79%,37%)] font-medium text-base sm:text-lg mb-4 block tracking-wide">Why Choose Learnify?</span>
           <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight animate-slide-up mb-10 sm:mb-16">
             Step Into Experience<br />
             Based Learning

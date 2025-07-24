@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
-import WhyChooseUnlox from "@/components/WhyChooseUnlox";
+import WhyChooseLearnify from "@/components/WhyChooseLearnify";
 import EduletSection from "@/components/EduletSection";
 import AIBluSection from "@/components/AIBluSection";
 import LearningModules from "@/components/LearningModules";
@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <Layout>
       <Hero />
-      <WhyChooseUnlox />
+      <WhyChooseLearnify />
       <EduletSection />
       <AIBluSection />
       <LearningModules />

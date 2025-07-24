@@ -61,7 +61,7 @@ export default function AboutUsPage() {
   ];
 
   const timeline = [
-    { year: "2020", title: "Foundation", description: "Unlox Academy was founded with the vision to make learning easy and accessible." },
+    { year: "2020", title: "Foundation", description: "Learnify Academy was founded with the vision to make learning easy and accessible." },
     { year: "2021", title: "First Milestone", description: "Launched our first AI-integrated courses and reached 1,000 students." },
     { year: "2022", title: "Innovation Launch", description: "Introduced Edu-let, India's first educational tablet." },
     { year: "2023", title: "Global Expansion", description: "Started partnerships with international companies for global internships." },
@@ -81,7 +81,7 @@ export default function AboutUsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8 animate-slide-up">
-              About Unlox Academy
+              About Learnify Academy
             </h1>
             <p className="text-xl lg:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto animate-slide-up" style={{ animationDelay: '0.2s' }}>
               We're revolutionizing education with our core belief: <span className="text-yellow-300 font-bold">"Learning Made Easy"</span>. 
@@ -124,7 +124,7 @@ export default function AboutUsPage() {
               Our Core Values
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              These principles guide everything we do at Unlox Academy and define how we serve our students.
+              These principles guide everything we do at Learnify Academy and define how we serve our students.
             </p>
           </div>
           
@@ -282,7 +282,7 @@ export default function AboutUsPage() {
             Ready to Join Our Community?
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Become part of the Unlox family and experience education that's designed for real-world success.
+                          Become part of the Learnify family and experience education that's designed for real-world success.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-[hsl(219,79%,37%)] text-white px-8 py-4 text-lg font-semibold hover:bg-[hsl(217,91%,60%)]">

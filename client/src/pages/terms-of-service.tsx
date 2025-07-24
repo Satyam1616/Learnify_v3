@@ -17,7 +17,7 @@ export default function TermsOfServicePage() {
           <div className="prose prose-lg max-w-none">
             <div className="bg-blue-50 p-6 rounded-lg mb-8">
               <p className="text-blue-800 font-medium">
-                Welcome to UNLOX. By accessing or using our platform, you agree to be bound by these Terms of Service. 
+                Welcome to LEARNIFY. By accessing or using our platform, you agree to be bound by these Terms of Service. 
                 Please read them carefully before using our services.
               </p>
             </div>
@@ -25,7 +25,7 @@ export default function TermsOfServicePage() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Acceptance of Terms</h2>
               <p className="text-gray-600">
-                By accessing and using UNLOX services, you accept and agree to be bound by the terms and provision of this agreement. 
+                By accessing and using LEARNIFY services, you accept and agree to be bound by the terms and provision of this agreement. 
                 If you do not agree to abide by the above, please do not use this service.
               </p>
             </section>
@@ -33,7 +33,7 @@ export default function TermsOfServicePage() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Description of Service</h2>
               <p className="text-gray-600 mb-4">
-                UNLOX provides online educational services including but not limited to:
+                LEARNIFY provides online educational services including but not limited to:
               </p>
               <ul className="list-disc pl-6 text-gray-600 space-y-1">
                 <li>Online courses and training programs</li>
@@ -95,7 +95,7 @@ export default function TermsOfServicePage() {
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Our Content</h3>
                   <p className="text-gray-600">
                     All content provided on our platform, including courses, videos, text, graphics, logos, and software, 
-                    is the property of UNLOX or its content suppliers and is protected by intellectual property laws.
+                    is the property of LEARNIFY or its content suppliers and is protected by intellectual property laws.
                   </p>
                 </div>
                 
@@ -133,7 +133,7 @@ export default function TermsOfServicePage() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Limitation of Liability</h2>
               <p className="text-gray-600">
-                In no event shall UNLOX, nor its directors, employees, partners, agents, suppliers, or affiliates, 
+                In no event shall LEARNIFY, nor its directors, employees, partners, agents, suppliers, or affiliates, 
                 be liable for any indirect, incidental, special, consequential, or punitive damages, including without 
                 limitation, loss of profits, data, use, goodwill, or other intangible losses.
               </p>
@@ -170,9 +170,9 @@ export default function TermsOfServicePage() {
                 If you have any questions about these Terms of Service, please contact us:
               </p>
               <div className="bg-gray-50 p-4 rounded-lg">
-                <p className="text-gray-700"><strong>Email:</strong> legal@unlox.com</p>
+                <p className="text-gray-700"><strong>Email:</strong> legal@learnify.com</p>
                 <p className="text-gray-700"><strong>Phone:</strong> +91-XXXX-XXXX-XX</p>
-                <p className="text-gray-700"><strong>Address:</strong> UNLOX Legal Department, [Address]</p>
+                <p className="text-gray-700"><strong>Address:</strong> LEARNIFY Legal Department, [Address]</p>
               </div>
             </section>
           </div>

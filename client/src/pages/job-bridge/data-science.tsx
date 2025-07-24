@@ -127,7 +127,7 @@ export default function DataScienceProgram() {
               Ready to Start Your Data Science Journey?
             </h2>
             <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
-              Apply now or download the brochure to get started with Unlox Academy’s Data Science Program.
+              Apply now or download the brochure to get started with Learnify Academy’s Data Science Program.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-white text-green-900 px-8 py-4 text-lg font-semibold hover:bg-gray-100">

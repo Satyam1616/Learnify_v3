@@ -65,11 +65,11 @@ export function ContactFormSection() {
           <div className="animate-slide-up">
             <div className="mb-8">
               <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                Unlox Now!
+                Learnify Now!
               </h2>
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold text-blue-300 mb-4">
-                  Unlox endless opportunities
+                  Learnify endless opportunities
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
                   Join 1 lakh+ today and access AI-powered learning, expert mentorship, and dedicated placements.
@@ -80,7 +80,7 @@ export function ContactFormSection() {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                <span className="text-gray-300">support@unlox.com</span>
+                <span className="text-gray-300">support@learnify.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-blue-400 rounded-full"></div>

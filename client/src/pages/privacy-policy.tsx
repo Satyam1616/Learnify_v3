@@ -17,7 +17,7 @@ export default function PrivacyPolicyPage() {
           <div className="prose prose-lg max-w-none">
             <div className="bg-blue-50 p-6 rounded-lg mb-8">
               <p className="text-blue-800 font-medium">
-                At UNLOX, we are committed to protecting your privacy and ensuring the security of your personal information. 
+                At LEARNIFY, we are committed to protecting your privacy and ensuring the security of your personal information. 
                 This Privacy Policy explains how we collect, use, and safeguard your data.
               </p>
             </div>
@@ -142,9 +142,9 @@ export default function PrivacyPolicyPage() {
                 If you have any questions about this Privacy Policy or our data practices, please contact us:
               </p>
               <div className="bg-gray-50 p-4 rounded-lg">
-                <p className="text-gray-700"><strong>Email:</strong> privacy@unlox.com</p>
+                <p className="text-gray-700"><strong>Email:</strong> privacy@learnify.com</p>
                 <p className="text-gray-700"><strong>Phone:</strong> +91-XXXX-XXXX-XX</p>
-                <p className="text-gray-700"><strong>Address:</strong> UNLOX Privacy Office, [Address]</p>
+                <p className="text-gray-700"><strong>Address:</strong> LEARNIFY Privacy Office, [Address]</p>
               </div>
             </section>
           </div>

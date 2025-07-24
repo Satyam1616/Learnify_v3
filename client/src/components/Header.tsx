@@ -18,7 +18,7 @@ export default function Header() {
               <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-[hsl(219,79%,37%)] to-[hsl(217,91%,60%)] rounded-lg flex items-center justify-center mr-2 group-hover:scale-110 group-active:scale-95 transition-transform duration-200">
                 <span className="text-white font-bold text-base sm:text-lg">%</span>
               </div>
-              <span className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-[hsl(219,79%,37%)] transition-colors duration-200">UNLOX</span>
+              <span className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-[hsl(219,79%,37%)] transition-colors duration-200">LEARNIFY</span>
             </Link>
           </div>
 

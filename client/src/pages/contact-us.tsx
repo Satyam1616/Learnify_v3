@@ -15,21 +15,21 @@ export default function ContactUsPage() {
     {
       icon: Mail,
       title: "Email Support",
-      details: "support@unlox.com",
+      details: "support@learnify.com",
       description: "Get detailed help via email",
       action: "Send Email"
     },
     {
       icon: Mail,
       title: "General Queries",
-      details: "query@unlox.com",
+      details: "query@learnify.com",
       description: "For general information and questions",
       action: "Send Query"
     },
     {
       icon: Headphones,
       title: "Partnership Inquiries",
-      details: "partners@unlox.com",
+      details: "partners@learnify.com",
       description: "For business partnerships and collaborations",
       action: "Partner With Us"
     }
@@ -40,7 +40,7 @@ export default function ContactUsPage() {
       city: "Bangalore (HQ)",
       address: "Hustle Hub, 17th Cross Road, Sector 4, HSR Layout, Bengaluru, Karnataka 560102",
       phone: "0806977266",
-      email: "support@unlox.com"
+      email: "support@learnify.com"
     }
   ];
 
@@ -263,7 +263,7 @@ export default function ContactUsPage() {
             Ready to Start Learning?
           </h2>
           <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
-            Don't wait! Contact us today and take the first step towards transforming your career with Unlox Academy.
+                          Don't wait! Contact us today and take the first step towards transforming your career with Learnify Academy.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-white text-green-600 px-8 py-4 text-lg font-semibold hover:bg-gray-100">

@@ -65,7 +65,7 @@ export default function JobBridgeProgramsPage() {
   const benefits = [
     { icon: Users, title: "Expert Mentorship", description: "1:1 guidance from industry professionals" },
     { icon: BookOpen, title: "Practical Learning", description: "Hands-on projects with real-world applications" },
-    { icon: Award, title: "Industry Certification", description: "Recognized certificates from Unlox Academy" },
+    { icon: Award, title: "Industry Certification", description: "Recognized certificates from Learnify Academy" },
     { icon: CheckCircle, title: "Job Assistance", description: "Placement support and career guidance" }
   ];
 

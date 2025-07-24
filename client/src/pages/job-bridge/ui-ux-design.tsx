@@ -127,7 +127,7 @@ export default function UIUXDesignProgram() {
               Ready to Start Your UI/UX Design Journey?
             </h2>
             <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
-              Apply now or download the brochure to get started with Unlox Academy’s UI/UX Design Program.
+              Apply now or download the brochure to get started with Learnify Academy’s UI/UX Design Program.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-white text-pink-700 px-8 py-4 text-lg font-semibold hover:bg-gray-100">

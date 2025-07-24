@@ -25,7 +25,7 @@ export default function Hero() {
                 ))}
               </div>
               <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-lg leading-relaxed animate-slide-up" style={{ animationDelay: '0.8s' }}>
-                Unlox was created with one simple yet powerful core belief, "Learning Made Easy". Dive into our dynamic programs, connect with awesome mentors, and experience education like never before.
+                Learnify was created with one simple yet powerful core belief, "Learning Made Easy". Dive into our dynamic programs, connect with awesome mentors, and experience education like never before.
               </p>
             </div>
             <Button className="w-full sm:w-auto bg-gradient-to-r from-[hsl(219,79%,37%)] to-[hsl(217,91%,60%)] text-white px-8 py-4 rounded-xl font-semibold text-base sm:text-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 animate-scale-in" style={{ animationDelay: '1.2s' }}>

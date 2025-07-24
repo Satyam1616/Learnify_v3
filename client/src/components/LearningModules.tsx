@@ -27,7 +27,7 @@ export default function LearningModules() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-10 sm:mb-16">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 animate-slide-up">
-            Unlox the easiest learning modules ever
+                          Learnify the easiest learning modules ever
           </h2>
         </div>
 

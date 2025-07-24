@@ -23,9 +23,9 @@
   --destructive-foreground: hsl(210, 40%, 98%);
   --ring: hsl(207, 90%, 54%);
   --radius: 0.5rem;
-  --unlox-blue: hsl(219, 79%, 37%);
-  --unlox-light-blue: hsl(217, 91%, 60%);
-  --unlox-bg: hsl(220, 13%, 97%);
+  --learnify-blue: hsl(219, 79%, 37%);
+  --learnify-light-blue: hsl(217, 91%, 60%);
+  --learnify-bg: hsl(220, 13%, 97%);
 }
 
 .dark {

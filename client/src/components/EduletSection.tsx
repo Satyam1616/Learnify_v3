@@ -56,7 +56,7 @@ export default function EduletSection() {
                 </h2>
               </div>
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                Every Unlox learner receives a dedicated education tablet, providing seamless, distraction-free learning. With 24/7 access to course materials, Unlox Academy's tablet ensures enhanced focus and immersive engagement, redefining the future of online education.
+                Every Learnify learner receives a dedicated education tablet, providing seamless, distraction-free learning. With 24/7 access to course materials, Learnify Academy's tablet ensures enhanced focus and immersive engagement, redefining the future of online education.
               </p>
             </div>
             <Button className="w-full sm:w-auto bg-[hsl(219,79%,37%)] text-white px-8 py-4 rounded-xl font-semibold text-base sm:text-lg hover:bg-[hsl(217,91%,60%)] transform hover:scale-105 transition-all duration-300">
@@ -74,7 +74,7 @@ export default function EduletSection() {
                     <div className="w-12 h-12 sm:w-20 sm:h-20 bg-white rounded-full mx-auto mb-4 flex items-center justify-center">
                       <div className="w-0 h-0 border-l-4 border-r-4 border-b-6 sm:border-l-8 sm:border-r-8 sm:border-b-12 border-transparent border-b-white"></div>
                     </div>
-                    <div className="text-white text-base sm:text-lg font-bold mb-2">Welcome to Unlox</div>
+                    <div className="text-white text-base sm:text-lg font-bold mb-2">Welcome to Learnify</div>
                     <div className="text-blue-100 text-xs sm:text-sm">Your learning journey starts here</div>
                   </div>
                 </div>
@@ -82,7 +82,7 @@ export default function EduletSection() {
                 <div className="bg-gray-800 rounded-xl p-4 sm:p-6 relative min-h-[120px] sm:min-h-[200px]">
                   <div className="text-center">
                     <div className="text-white text-lg sm:text-2xl font-bold mb-2">11:36</div>
-                    <div className="text-white text-base sm:text-xl font-bold mb-4">UNLOX</div>
+                    <div className="text-white text-base sm:text-xl font-bold mb-4">LEARNIFY</div>
                     <div className="grid grid-cols-3 gap-1 sm:gap-2 mb-4">
                       {['📚', '🎓', '📊', '💬', '⚙️', '📱'].map((icon, i) => (
                         <div key={i} className="w-8 h-8 sm:w-12 sm:h-12 bg-gray-700 rounded-xl flex items-center justify-center text-lg">
@@ -90,7 +90,7 @@ export default function EduletSection() {
                         </div>
                       ))}
                     </div>
-                    <div className="text-gray-400 text-xs">Edu-let by Unlox Academy</div>
+                    <div className="text-gray-400 text-xs">Edu-let by Learnify Academy</div>
                   </div>
                 </div>
               </div>

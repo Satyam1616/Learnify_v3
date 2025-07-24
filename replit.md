@@ -1,8 +1,8 @@
-# Unlox Learning Platform
+# Learnify Learning Platform
 
 ## Overview
 
-This is a full-stack web application for Unlox, an educational platform featuring AI-powered learning with their intelligent mentor "Blu". The application provides various learning modules including e-learning programs, global internships, and research paper opportunities, along with educational tablets and smart lab facilities.
+This is a full-stack web application for Learnify, an educational platform featuring AI-powered learning with their intelligent mentor "Blu". The application provides various learning modules including e-learning programs, global internships, and research paper opportunities, along with educational tablets and smart lab facilities.
 
 ## User Preferences
 
@@ -44,7 +44,7 @@ Preferred communication style: Simple, everyday language.
 - **Session Storage**: PostgreSQL-based session management
 
 ### UI Design System
-- **Theme**: Custom Unlox branding with blue color scheme
+- **Theme**: Custom Learnify branding with blue color scheme
 - **Components**: Comprehensive UI library including forms, dialogs, navigation
 - **Responsive Design**: Mobile-first approach with Tailwind CSS
 - **Accessibility**: Radix UI primitives ensure WCAG compliance

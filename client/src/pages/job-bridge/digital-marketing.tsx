@@ -127,7 +127,7 @@ export default function DigitalMarketingProgram() {
               Ready to Start Your Digital Marketing Journey?
             </h2>
             <p className="text-xl text-yellow-100 mb-8 max-w-3xl mx-auto">
-              Apply now or download the brochure to get started with Unlox Academy’s Digital Marketing Program.
+              Apply now or download the brochure to get started with Learnify Academy’s Digital Marketing Program.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-white text-pink-600 px-8 py-4 text-lg font-semibold hover:bg-gray-100">

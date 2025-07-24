@@ -48,7 +48,7 @@ export default function EduLetPage() {
   ];
 
   const apps = [
-    { name: "Unlox Academy", description: "Main learning platform with AI assistant Blu" },
+    { name: "Learnify Academy", description: "Main learning platform with AI assistant Blu" },
     { name: "Virtual Labs", description: "Hands-on practice environments for coding and design" },
     { name: "Assessment Center", description: "Regular quizzes, tests, and progress tracking" },
     { name: "Study Planner", description: "AI-powered study schedule and goal management" },
@@ -99,7 +99,7 @@ export default function EduLetPage() {
                       <div className="w-20 h-20 bg-white rounded-full mx-auto mb-4 flex items-center justify-center">
                         <div className="w-0 h-0 border-l-8 border-r-8 border-b-12 border-transparent border-b-white"></div>
                       </div>
-                      <div className="text-white text-lg font-bold mb-2">Welcome to Unlox</div>
+                      <div className="text-white text-lg font-bold mb-2">Welcome to Learnify</div>
                       <div className="text-blue-100 text-sm">Your learning journey starts here</div>
                     </div>
                   </div>
@@ -108,7 +108,7 @@ export default function EduLetPage() {
                   <div className="bg-gray-800 rounded-xl p-6 relative min-h-[200px]">
                     <div className="text-center">
                       <div className="text-white text-2xl font-bold mb-2">11:36</div>
-                      <div className="text-white text-xl font-bold mb-4">UNLOX</div>
+                      <div className="text-white text-xl font-bold mb-4">LEARNIFY</div>
                       <div className="grid grid-cols-3 gap-2 mb-4">
                         {["📚", "🎓", "📊", "💬", "⚙️", "📱"].map((icon, i) => (
                           <div key={i} className="w-12 h-12 bg-gray-700 rounded-xl flex items-center justify-center text-lg">
@@ -116,7 +116,7 @@ export default function EduLetPage() {
                           </div>
                         ))}
                       </div>
-                      <div className="text-gray-400 text-xs">Edu-let by Unlox Academy</div>
+                      <div className="text-gray-400 text-xs">Edu-let by Learnify Academy</div>
                     </div>
                   </div>
                 </div>
