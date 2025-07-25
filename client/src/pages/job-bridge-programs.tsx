@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Users, BookOpen, Award, Star, ArrowRight } from "lucide-react";
+import { CheckCircle, Users, BookOpen, Award, Star, ArrowRight, Bot } from "lucide-react";
 import Layout from "@/components/Layout";
 import { useLocation } from "wouter";
 
@@ -59,6 +59,18 @@ export default function JobBridgeProgramsPage() {
       price: "₹42,999",
       features: ["Excel/SQL", "Power BI/Tableau", "Statistical Analysis", "Business Intelligence", "Real Datasets"],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+    },
+    {
+      title: "Dedicated 24/7 AI Mentor",
+      slug: "blu-mentor",
+      duration: "Always Available",
+      level: "All Levels",
+      price: "Free",
+      features: ["Resume Feedback", "Interview Practice", "Career Guidance", "Skill Gap Analysis", "24/7 Support"],
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      special: true,
+      tagline: "Get 24/7 guidance for your career from Blu – your personal AI mentor.",
+      icon: Bot
     }
   ];
 
@@ -129,7 +141,7 @@ export default function JobBridgeProgramsPage() {
           </div>
         </section>
 
-        {/* Unlox Learning Perks Section */}
+        {/* Learnify Learning Perks Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -137,7 +149,7 @@ export default function JobBridgeProgramsPage() {
                 Benefits of our Job Bridge Program
               </p>
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-                The Unlox Learning Perks
+                The Learnify Learning Perks
               </h2>
             </div>
 
@@ -273,37 +285,66 @@ export default function JobBridgeProgramsPage() {
               {programs.map((program, index) => (
                 <div
                   key={index}
-                  className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-lg hover-lift animate-scale-in group"
+                  className={`${program.special ? 'bg-gradient-to-br from-[hsl(219,79%,37%)] to-[hsl(217,91%,60%)] text-white' : 'bg-white border border-gray-200'} rounded-2xl overflow-hidden shadow-lg hover-lift animate-scale-in group cursor-pointer`}
                   style={{ animationDelay: `${index * 0.15}s` }}
-                  onClick={() => setLocation(`/job-bridge/${program.slug}`)}
+                  onClick={() => setLocation(program.special ? `/blu-mentor` : `/job-bridge/${program.slug}`)}
                   role="button"
                   tabIndex={0}
-                  onKeyPress={e => { if (e.key === 'Enter') setLocation(`/job-bridge/${program.slug}`); }}
+                  onKeyPress={e => { if (e.key === 'Enter') setLocation(program.special ? `/blu-mentor` : `/job-bridge/${program.slug}`); }}
                 >
                   <div className="relative overflow-hidden">
-                    <img
-                      src={program.image}
-                      alt={program.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 smooth-transition"
-                    />
-                    <div className="absolute top-4 right-4">
-                      <div className="bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-semibold text-gray-900">
-                        {program.duration}
+                    {program.special ? (
+                      <div className="h-48 flex items-center justify-center bg-gradient-to-br from-white/10 to-white/20 relative">
+                        <div className="absolute inset-0 bg-gradient-to-br from-cyan-300/20 to-blue-300/20 animate-pulse"></div>
+                        {program.icon && <program.icon className="h-24 w-24 text-white/90 animate-breathing-glow" />}
+                        <div className="absolute top-4 left-4">
+                          <div className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-sm font-semibold text-white">
+                            AI Powered
+                          </div>
+                        </div>
                       </div>
-                    </div>
+                    ) : (
+                      <img
+                        src={program.image}
+                        alt={program.title}
+                        className="w-full h-48 object-cover group-hover:scale-105 smooth-transition"
+                      />
+                    )}
+                    {!program.special && (
+                      <div className="absolute top-4 right-4">
+                        <div className="bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-semibold text-gray-900">
+                          {program.duration}
+                        </div>
+                      </div>
+                    )}
+                    {program.special && (
+                      <div className="absolute top-4 right-4">
+                        <div className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-sm font-semibold text-white">
+                          {program.duration}
+                        </div>
+                      </div>
+                    )}
                   </div>
 
                   <div className="p-6">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{program.title}</h3>
-                    <p className="text-gray-600 mb-4">{program.level}</p>
+                    <h3 className={`text-2xl font-bold mb-2 ${program.special ? 'text-white' : 'text-gray-900'}`}>
+                      {program.title}
+                    </h3>
+                    {program.special && program.tagline ? (
+                      <p className="text-white/90 mb-4 text-sm leading-relaxed">{program.tagline}</p>
+                    ) : (
+                      <p className={`mb-4 ${program.special ? 'text-white/90' : 'text-gray-600'}`}>{program.level}</p>
+                    )}
 
                     <div className="mb-6">
-                      <div className="text-3xl font-bold text-[hsl(219,79%,37%)] mb-4">{program.price}</div>
+                      <div className={`text-3xl font-bold mb-4 ${program.special ? 'text-white' : 'text-[hsl(219,79%,37%)]'}`}>
+                        {program.price}
+                      </div>
 
                       <ul className="space-y-2">
                         {program.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center text-gray-600">
-                            <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                          <li key={featureIndex} className={`flex items-center ${program.special ? 'text-white/90' : 'text-gray-600'}`}>
+                            <CheckCircle className={`h-4 w-4 mr-2 flex-shrink-0 ${program.special ? 'text-white/90' : 'text-green-500'}`} />
                             {feature}
                           </li>
                         ))}
@@ -311,10 +352,16 @@ export default function JobBridgeProgramsPage() {
                     </div>
 
                     <Button
-                      className="w-full bg-[hsl(219,79%,37%)] text-white hover:bg-[hsl(217,91%,60%)] group"
-                      onClick={e => { e.stopPropagation(); setLocation(`/job-bridge/${program.slug}`); }}
+                      className={`w-full group ${program.special
+                        ? 'bg-white text-[hsl(219,79%,37%)] hover:bg-gray-100'
+                        : 'bg-[hsl(219,79%,37%)] text-white hover:bg-[hsl(217,91%,60%)]'
+                        }`}
+                      onClick={e => {
+                        e.stopPropagation();
+                        setLocation(program.special ? `/blu-mentor` : `/job-bridge/${program.slug}`);
+                      }}
                     >
-                      Enroll Now
+                      {program.special ? 'Meet Blu' : 'Enroll Now'}
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </div>
