@@ -129,8 +129,136 @@ export default function JobBridgeProgramsPage() {
           </div>
         </section>
 
-        {/* Programs Section */}
+        {/* Unlox Learning Perks Section */}
         <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <p className="text-lg text-[hsl(219,79%,37%)] font-semibold mb-4">
+                Benefits of our Job Bridge Program
+              </p>
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+                The Unlox Learning Perks
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {/* AI Mentor Card */}
+              <div className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer hover-lift">
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{
+                    backgroundImage: `url('https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400')`
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                <div className="absolute inset-0 p-6 flex flex-col justify-between">
+                  <div className="flex justify-center">
+                    <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                      <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-white text-xl font-bold mb-2">A dedicated 24/7 AI mentor</h3>
+                    <div className="flex justify-end">
+                      <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <ArrowRight className="w-5 h-5 text-gray-900" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Smart Labs Card */}
+              <div className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer hover-lift">
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{
+                    backgroundImage: `url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400')`
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                <div className="absolute inset-0 p-6 flex flex-col justify-between">
+                  <div className="flex justify-center">
+                    <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                      <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-white text-xl font-bold mb-2">A dedicated high-tech smart labs</h3>
+                    <div className="flex justify-end">
+                      <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <ArrowRight className="w-5 h-5 text-gray-900" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Edu-let Device Card */}
+              <div className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer hover-lift">
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{
+                    backgroundImage: `url('https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400')`
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                <div className="absolute inset-0 p-6 flex flex-col justify-between">
+                  <div className="flex justify-center">
+                    <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                      <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17 2H7c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM7 4h10v11H7V4z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-white text-xl font-bold mb-2">A dedicated learning device - Edu-let</h3>
+                    <div className="flex justify-end">
+                      <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <ArrowRight className="w-5 h-5 text-gray-900" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Career Support Card */}
+              <div className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer hover-lift">
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{
+                    backgroundImage: `url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400')`
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                <div className="absolute inset-0 p-6 flex flex-col justify-between">
+                  <div className="flex justify-center">
+                    <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                      <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A2.82 2.82 0 0 0 17.39 7c-.8 0-1.54.46-1.89 1.18l-2.3 4.59-2.89-7.19c-.34-.84-1.16-1.38-2.08-1.38-.92 0-1.74.54-2.08 1.38L2.16 18.84c-.22.55.06 1.16.61 1.38.55.22 1.16-.06 1.38-.61l2.63-6.58L8 16h2v6h4z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-white text-xl font-bold mb-2">A dedicated career guidance</h3>
+                    <div className="flex justify-end">
+                      <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <ArrowRight className="w-5 h-5 text-gray-900" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Programs Section */}
+        <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
@@ -145,8 +273,8 @@ export default function JobBridgeProgramsPage() {
               {programs.map((program, index) => (
                 <div
                   key={index}
-                                      className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-lg hover-lift animate-scale-in group"
-                    style={{ animationDelay: `${index * 0.15}s` }}
+                  className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-lg hover-lift animate-scale-in group"
+                  style={{ animationDelay: `${index * 0.15}s` }}
                   onClick={() => setLocation(`/job-bridge/${program.slug}`)}
                   role="button"
                   tabIndex={0}
@@ -156,7 +284,7 @@ export default function JobBridgeProgramsPage() {
                     <img
                       src={program.image}
                       alt={program.title}
-                                              className="w-full h-48 object-cover group-hover:scale-105 smooth-transition"
+                      className="w-full h-48 object-cover group-hover:scale-105 smooth-transition"
                     />
                     <div className="absolute top-4 right-4">
                       <div className="bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-semibold text-gray-900">
