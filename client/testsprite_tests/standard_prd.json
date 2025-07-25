@@ -1,0 +1,186 @@
+{
+  "meta": {
+    "project": "Learnify E-learning Platform",
+    "version": "1.0",
+    "date": "2025-07-24",
+    "prepared_by": "Franx Studios"
+  },
+  "product_overview": "Learnify is a modern, mobile-first e-learning platform providing mentor-led programs with real-world skill development and an intuitive, accessible digital experience across all devices.",
+  "core_goals": [
+    "Deliver mentor-led, structured programs with measurable outcomes.",
+    "Build a mobile-first interface that scales elegantly to desktop and other devices.",
+    "Ensure fully responsive, accessible, and bug-free UI/UX across browsers and screen sizes.",
+    "Handle edge cases like poor internet connectivity and slow devices gracefully.",
+    "Maintain strong security, privacy and accessibility standards (WCAG 2.1 compliance)."
+  ],
+  "key_features": [
+    "Hero Section with engaging headline and responsive CTA to Explore Programs.",
+    "Program Explorer with dynamic grid/list views, lazy loading, expandable modals or routed detail pages, and SEO optimization.",
+    "Mentor Showcase with bio cards including avatars, roles, badges and responsive autocolllapsing grid.",
+    "Why Choose Us section with animated cards using Framer Motion and enhanced accessibility features.",
+    "Testimonials carousel supporting swipe and arrow navigation, authenticated review submissions, profanity filtering, and duplicate prevention.",
+    "Contact and Inquiry Forms with multi-field validations, spam protection (reCAPTCHA or honeypot), and friendly error handling.",
+    "User Authentication with OAuth (Google) and Email/Password (JWT based) and a user dashboard including enrolled courses, notes, and certificates.",
+    "Responsive Header & Navigation with hamburger menu for mobile, responsive footer with social links and newsletter forms.",
+    "Reusable UI components and custom React hooks for mobile detection and toast notifications.",
+    "Performance optimizations like lazy loading, image fallback handling, and global error boundary recovery."
+  ],
+  "user_flow_summary": [
+    "Landing on the home page, users see the Hero Section with CTA leading to program browsing.",
+    "Users navigate to Program Explorer to browse learning modules with dynamic filtering and view details.",
+    "Users can view mentor bios on the Mentor Showcase and learn about platform advantages in the Why Choose Us section.",
+    "Authenticated users submit testimonials and access their dashboard for enrolled courses and certificates.",
+    "Users can contact support or subscribe to newsletters via responsive forms with validation and spam protection.",
+    "Authentication flow supporting OAuth sign-in and fallback email/password login with proper token refresh handling."
+  ],
+  "validation_criteria": [
+    "UI renders correctly and responsively across all supported devices and browsers.",
+    "Edge cases like slow network, empty states, broken images are handled gracefully with placeholders and loaders.",
+    "Forms validate entries properly with visual feedback and prevent spam submissions effectively.",
+    "Security features such as HTTPS-only cookies, bcrypt hashing, and GDPR compliant data handling are in place.",
+    "Accessibility standards are met including ARIA labels, keyboard navigations, and readable content structure.",
+    "Performance is optimized with lazy loading, minimal layout shifts, and appropriate error boundaries.",
+    "User authentication tokens refresh automatically and sessions maintain securely without crashes or glitches."
+  ],
+  "code_summary": {
+    "tech_stack": [
+      "TypeScript",
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "TanStack React Query",
+      "Netlify (deployment)",
+      "Lucide React (icons)"
+    ],
+    "features": [
+      {
+        "name": "App Routing",
+        "description": "Handles client-side routing for all main pages using Wouter.",
+        "files": [
+          "src/App.tsx"
+        ]
+      },
+      {
+        "name": "Hero Section",
+        "description": "Landing section with headline, description, and decorative elements.",
+        "files": [
+          "src/components/Hero.tsx"
+        ]
+      },
+      {
+        "name": "Header & Navigation",
+        "description": "Responsive header with navigation links and hamburger menu.",
+        "files": [
+          "src/components/Header.tsx"
+        ]
+      },
+      {
+        "name": "Footer",
+        "description": "Footer with social links, newsletter, and company info.",
+        "files": [
+          "src/components/Footer.tsx"
+        ]
+      },
+      {
+        "name": "Learning Modules",
+        "description": "Section displaying available learning modules.",
+        "files": [
+          "src/components/LearningModules.tsx"
+        ]
+      },
+      {
+        "name": "Why Choose Unlox",
+        "description": "Section highlighting unique selling points.",
+        "files": [
+          "src/components/WhyChooseUnlox.tsx"
+        ]
+      },
+      {
+        "name": "Edulet Section",
+        "description": "Section describing the Edu-let tablet feature.",
+        "files": [
+          "src/components/EduletSection.tsx"
+        ]
+      },
+      {
+        "name": "AIBlu Section",
+        "description": "Section introducing the Blu AI mentor.",
+        "files": [
+          "src/components/AIBluSection.tsx"
+        ]
+      },
+      {
+        "name": "SmartLabs Section",
+        "description": "Section describing Smart Labs facilities.",
+        "files": [
+          "src/components/SmartLabsSection.tsx"
+        ]
+      },
+      {
+        "name": "Partners Section",
+        "description": "Section showing partner companies.",
+        "files": [
+          "src/components/PartnersSection.tsx"
+        ]
+      },
+      {
+        "name": "Academic Partners Section",
+        "description": "Section showing academic partners.",
+        "files": [
+          "src/components/AcademicPartnersSection.tsx"
+        ]
+      },
+      {
+        "name": "Media Section",
+        "description": "Section showing media mentions.",
+        "files": [
+          "src/components/MediaSection.tsx"
+        ]
+      },
+      {
+        "name": "Contact Form",
+        "description": "Reusable contact form component.",
+        "files": [
+          "src/components/ContactForm.tsx"
+        ]
+      },
+      {
+        "name": "Newsletter Form",
+        "description": "Newsletter subscription form.",
+        "files": [
+          "src/components/NewsletterForm.tsx"
+        ]
+      },
+      {
+        "name": "UI Components",
+        "description": "Reusable UI primitives (buttons, dialogs, cards, etc.).",
+        "files": [
+          "src/components/ui/"
+        ]
+      },
+      {
+        "name": "Custom Hooks",
+        "description": "Custom React hooks for mobile detection and toast notifications.",
+        "files": [
+          "src/hooks/use-mobile.tsx",
+          "src/hooks/use-toast.ts"
+        ]
+      },
+      {
+        "name": "Pages",
+        "description": "Individual page components for about, contact, job-bridge, etc.",
+        "files": [
+          "src/pages/"
+        ]
+      },
+      {
+        "name": "Utils & Query Client",
+        "description": "Utility functions and React Query client setup.",
+        "files": [
+          "src/lib/utils.ts",
+          "src/lib/queryClient.ts"
+        ]
+      }
+    ]
+  }
+}
