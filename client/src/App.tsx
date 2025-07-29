@@ -6,7 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import JobBridgePrograms from "@/pages/job-bridge-programs";
 import GlobalInternship from "@/pages/global-internship";
-import EduLet from "@/pages/edu-let";
+
 import AboutUs from "@/pages/about-us";
 import ContactUs from "@/pages/contact-us";
 import NotFound from "@/pages/not-found";
@@ -24,6 +24,9 @@ import PrivacyPolicy from "@/pages/privacy-policy";
 import TermsOfService from "@/pages/terms-of-service";
 import ELearningCourses from "@/pages/e-learning-courses";
 import ResearchPaper from "@/pages/research-paper";
+import PythonProgramming from "@/pages/e-learning/python-programming";
+import DigitalPhotography from "@/pages/e-learning/digital-photography";
+import ExcelBusinessAnalytics from "@/pages/e-learning/excel-business-analytics";
 
 function Router() {
   return (
@@ -31,7 +34,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/job-bridge-programs" component={JobBridgePrograms} />
       <Route path="/global-internship" component={GlobalInternship} />
-      <Route path="/edu-let" component={EduLet} />
+
       <Route path="/about-us" component={AboutUs} />
       <Route path="/contact-us" component={ContactUs} />
       {/* Job Bridge Course Pages */}
@@ -49,6 +52,10 @@ function Router() {
       <Route path="/terms-of-service" component={TermsOfService} />
       <Route path="/e-learning-courses" component={ELearningCourses} />
       <Route path="/research-paper" component={ResearchPaper} />
+      {/* E-Learning Course Pages */}
+      <Route path="/e-learning/python-programming" component={PythonProgramming} />
+      <Route path="/e-learning/digital-photography" component={DigitalPhotography} />
+      <Route path="/e-learning/excel-business-analytics" component={ExcelBusinessAnalytics} />
       <Route component={NotFound} />
     </Switch>
   );

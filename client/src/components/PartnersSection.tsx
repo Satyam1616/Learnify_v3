@@ -25,7 +25,7 @@ export default function PartnersSection() {
                 key={`row1-${index}`}
                 className="flex-shrink-0 w-28 h-16 sm:w-40 sm:h-24 bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl flex items-center justify-center shadow-sm hover:shadow-md transition-shadow group"
               >
-                <span className="text-gray-700 font-semibold text-xs sm:text-sm group-hover:text-[hsl(219,79%,37%)] transition-colors">
+                <span className="text-gray-700 font-semibold text-xs sm:text-sm group-hover:text-[hsl(25,95%,53%)] transition-colors">
                   {company}
                 </span>
               </div>
@@ -41,7 +41,7 @@ export default function PartnersSection() {
                 key={`row2-${index}`}
                 className="flex-shrink-0 w-28 h-16 sm:w-40 sm:h-24 bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl flex items-center justify-center shadow-sm hover:shadow-md transition-shadow group"
               >
-                <span className="text-gray-700 font-semibold text-xs sm:text-sm group-hover:text-[hsl(219,79%,37%)] transition-colors">
+                <span className="text-gray-700 font-semibold text-xs sm:text-sm group-hover:text-[hsl(25,95%,53%)] transition-colors">
                   {company}
                 </span>
               </div>

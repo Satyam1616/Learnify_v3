@@ -27,7 +27,7 @@ export default function ContactForm() {
 
   const contactMutation = useMutation({
     mutationFn: (data: ContactFormData) =>
-      apiRequest("/api/contact", "POST", data),
+      apiRequest("POST", "/api/contact", data),
     onSuccess: () => {
       toast({
         title: "Message Sent!",
@@ -155,7 +155,7 @@ export default function ContactForm() {
 
         <Button
           type="submit"
-          className="w-full bg-[hsl(219,79%,37%)] text-white py-4 text-lg font-semibold hover:bg-[hsl(217,91%,60%)]"
+          className="w-full bg-[hsl(25,95%,53%)] text-white py-4 text-lg font-semibold hover:bg-[hsl(35,95%,60%)]"
           disabled={contactMutation.isPending}
         >
           {contactMutation.isPending ? "Sending Message..." : "Send Message"}

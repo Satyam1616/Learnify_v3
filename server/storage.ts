@@ -1,9 +1,9 @@
-import { 
-  users, 
+import {
+  users,
   contactSubmissions,
   newsletterSubscriptions,
   courseEnrollments,
-  type User, 
+  type User,
   type InsertUser,
   type ContactSubmission,
   type InsertContactSubmission,
@@ -12,6 +12,7 @@ import {
   type CourseEnrollment,
   type InsertCourseEnrollment
 } from "@shared/schema";
+import { getDb } from "./mongo";
 
 // modify the interface with any CRUD methods
 // you might need
@@ -114,4 +115,112 @@ export class MemStorage implements IStorage {
   }
 }
 
-export const storage = new MemStorage();
+export class MongoStorage implements IStorage {
+  async getUser(id: number): Promise<User | undefined> { 
+    // User functionality not needed for contact forms
+    throw new Error("User functionality not implemented"); 
+  }
+  async getUserByUsername(username: string): Promise<User | undefined> { 
+    // User functionality not needed for contact forms
+    throw new Error("User functionality not implemented"); 
+  }
+  async createUser(user: InsertUser): Promise<User> { 
+    // User functionality not needed for contact forms
+    throw new Error("User functionality not implemented"); 
+  }
+
+  async createContactSubmission(insertSubmission: InsertContactSubmission): Promise<ContactSubmission> {
+    const db = await getDb();
+    const collection = db.collection("contacts");
+    const doc = {
+      ...insertSubmission,
+      createdAt: new Date(),
+    };
+    const result = await collection.insertOne(doc);
+    return {
+      id: result.insertedId.toString() as any,
+      ...insertSubmission,
+      createdAt: doc.createdAt,
+    } as ContactSubmission;
+  }
+
+  async createNewsletterSubscription(subscription: InsertNewsletterSubscription): Promise<NewsletterSubscription> {
+    const db = await getDb();
+    const collection = db.collection("newsletter_subscriptions");
+    
+    // Check if email already exists
+    const existingSubscription = await collection.findOne({ email: subscription.email });
+    if (existingSubscription) {
+      throw new Error("Email already subscribed");
+    }
+    
+    const doc = {
+      ...subscription,
+      createdAt: new Date(),
+    };
+    const result = await collection.insertOne(doc);
+    return {
+      id: result.insertedId.toString(),
+      ...subscription,
+      createdAt: doc.createdAt,
+    } as NewsletterSubscription;
+  }
+
+  async createCourseEnrollment(enrollment: InsertCourseEnrollment): Promise<CourseEnrollment> {
+    const db = await getDb();
+    const collection = db.collection("course_enrollments");
+    const doc = {
+      ...enrollment,
+      createdAt: new Date(),
+    };
+    const result = await collection.insertOne(doc);
+    return {
+      id: result.insertedId.toString() as any,
+      ...enrollment,
+      createdAt: doc.createdAt,
+    } as CourseEnrollment;
+  }
+
+  async getAllContactSubmissions(): Promise<ContactSubmission[]> {
+    const db = await getDb();
+    const collection = db.collection("contacts");
+    const docs = await collection.find({}).sort({ createdAt: -1 }).toArray();
+    return docs.map(doc => ({
+      id: doc._id.toString() as any,
+      fullName: doc.fullName,
+      email: doc.email,
+      phoneNumber: doc.phoneNumber,
+      programInterest: doc.programInterest,
+      message: doc.message,
+      createdAt: doc.createdAt,
+    }));
+  }
+
+  async getAllNewsletterSubscriptions(): Promise<NewsletterSubscription[]> {
+    const db = await getDb();
+    const collection = db.collection("newsletter_subscriptions");
+    const docs = await collection.find({}).sort({ createdAt: -1 }).toArray();
+    return docs.map(doc => ({
+      id: doc._id.toString() as any,
+      email: doc.email,
+      createdAt: doc.createdAt,
+    }));
+  }
+
+  async getAllCourseEnrollments(): Promise<CourseEnrollment[]> {
+    const db = await getDb();
+    const collection = db.collection("course_enrollments");
+    const docs = await collection.find({}).sort({ createdAt: -1 }).toArray();
+    return docs.map(doc => ({
+      id: doc._id.toString() as any,
+      fullName: doc.fullName,
+      email: doc.email,
+      phoneNumber: doc.phoneNumber,
+      courseName: doc.courseName,
+      createdAt: doc.createdAt,
+    }));
+  }
+}
+
+export const storage = new MongoStorage();
+// export const storage = new MemStorage(); // (for fallback/testing)

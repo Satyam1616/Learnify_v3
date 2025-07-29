@@ -1,26 +1,25 @@
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
-import WhyChooseLearnify from "@/components/WhyChooseLearnify";
-import EduletSection from "@/components/EduletSection";
-import AIBluSection from "@/components/AIBluSection";
-import LearningModules from "@/components/LearningModules";
-import SmartLabsSection from "@/components/SmartLabsSection";
+import StatsSection from "@/components/StatsSection";
+import MentorshipSection from "@/components/MentorshipSection";
+import CourseCardsSection from "@/components/CourseCardsSection";
 import PartnersSection from "@/components/PartnersSection";
-import AcademicPartnersSection from "@/components/AcademicPartnersSection";
-import MediaSection, { ContactFormSection } from "@/components/MediaSection";
+import LearningModules from "@/components/LearningModules";
+import StudyAbroadSection from "@/components/StudyAbroadSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import { ContactFormSection } from "@/components/MediaSection";
 
 export default function Home() {
   return (
     <Layout>
       <Hero />
-      <WhyChooseLearnify />
-      <EduletSection />
-      <AIBluSection />
-      <LearningModules />
-      <SmartLabsSection />
+      <StatsSection />
+      <MentorshipSection />
+      <CourseCardsSection />
       <PartnersSection />
-      <AcademicPartnersSection />
-      <MediaSection />
+      <LearningModules />
+      <StudyAbroadSection />
+      <TestimonialsSection />
       <ContactFormSection />
     </Layout>
   );

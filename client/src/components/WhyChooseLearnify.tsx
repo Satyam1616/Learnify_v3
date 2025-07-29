@@ -28,7 +28,7 @@ export default function WhyChooseLearnify() {
 
       <div className="w-full px-4 md:max-w-7xl md:mx-auto md:px-6 lg:px-8 relative z-10 flex flex-col items-center justify-center">
         <div className="text-center mb-10 sm:mb-16">
-                          <span className="text-[hsl(219,79%,37%)] font-medium text-base sm:text-lg mb-4 block tracking-wide">Why Choose Learnify?</span>
+                          <span className="text-[hsl(25,95%,53%)] font-medium text-base sm:text-lg mb-4 block tracking-wide">Why Choose Learnify?</span>
           <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight animate-slide-up mb-10 sm:mb-16">
             Step Into Experience<br />
             Based Learning
@@ -38,7 +38,7 @@ export default function WhyChooseLearnify() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 gap-y-8 mb-10 sm:mb-16 w-full">
           {/* Feature 1 */}
           <div className="bg-white rounded-3xl p-6 sm:p-8 text-center shadow-lg hover-lift animate-scale-in group">
-            <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-[hsl(219,79%,37%)] transition-colors">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-[hsl(25,95%,53%)] transition-colors">
               <Brain className="h-7 w-7 sm:h-8 sm:w-8 text-gray-600 group-hover:text-white transition-colors" />
             </div>
             <h3 className="text-base sm:text-xl font-bold text-gray-800 mb-2 sm:mb-4">
@@ -49,7 +49,7 @@ export default function WhyChooseLearnify() {
 
           {/* Feature 2 */}
           <div className="bg-white rounded-3xl p-6 sm:p-8 text-center shadow-lg hover-lift animate-scale-in group" style={{ animationDelay: '0.2s' }}>
-            <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-[hsl(219,79%,37%)] transition-colors">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-[hsl(25,95%,53%)] transition-colors">
               <Users className="h-7 w-7 sm:h-8 sm:w-8 text-gray-600 group-hover:text-white transition-colors" />
             </div>
             <h3 className="text-base sm:text-xl font-bold text-gray-800 mb-2 sm:mb-4">
@@ -60,7 +60,7 @@ export default function WhyChooseLearnify() {
 
           {/* Feature 3 */}
           <div className="bg-white rounded-3xl p-6 sm:p-8 text-center shadow-lg hover-lift animate-scale-in group" style={{ animationDelay: '0.4s' }}>
-            <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-[hsl(219,79%,37%)] transition-colors">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-[hsl(25,95%,53%)] transition-colors">
               <GitBranch className="h-7 w-7 sm:h-8 sm:w-8 text-gray-600 group-hover:text-white transition-colors" />
             </div>
             <h3 className="text-base sm:text-xl font-bold text-gray-800 mb-2 sm:mb-4">

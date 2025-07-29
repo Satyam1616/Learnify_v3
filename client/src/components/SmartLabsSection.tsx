@@ -20,12 +20,12 @@ export default function SmartLabsSection() {
   ];
 
   return (
-    <section className="py-10 sm:py-16 md:py-20 bg-gradient-to-br from-gray-900 to-[hsl(219,79%,37%)] text-white relative overflow-hidden">
+    <section className="py-10 sm:py-16 md:py-20 bg-[hsl(25,95%,53%)] text-white relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-16 h-16 sm:w-32 sm:h-32 border-2 border-white rounded-full animate-pulse-slow"></div>
         <div className="absolute bottom-10 right-10 w-12 h-12 sm:w-24 sm:h-24 bg-white rounded-full animate-float"></div>
-        <div className="absolute top-1/2 left-4 sm:left-10 w-8 h-8 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full animate-bounce-slow"></div>
+        <div className="absolute top-1/2 left-4 sm:left-10 w-8 h-8 sm:w-16 sm:h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-full animate-bounce-slow"></div>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-10 sm:mb-20">
@@ -47,7 +47,7 @@ export default function SmartLabsSection() {
                 alt="Modern classroom with high-tech equipment and smart boards"
                 className="rounded-2xl shadow-2xl w-full max-w-full h-auto group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl opacity-20 blur-xl"></div>
+              <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-orange-600 to-red-600 rounded-3xl opacity-20 blur-xl"></div>
             </div>
           </div>
           <div className="animate-slide-up" style={{ animationDelay: '0.6s' }}>
@@ -57,14 +57,14 @@ export default function SmartLabsSection() {
                 alt="Modern computer lab with multiple workstations and monitors"
                 className="rounded-2xl shadow-2xl w-full max-w-full h-auto group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-green-600 to-blue-600 rounded-3xl opacity-20 blur-xl"></div>
+              <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-green-600 to-orange-600 rounded-3xl opacity-20 blur-xl"></div>
             </div>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12">
           {features.map((feature, index) => {
             const IconComponent = feature.icon;
-            const colors = ['bg-blue-500', 'bg-green-500', 'bg-purple-500'];
+            const colors = ['bg-orange-500', 'bg-green-500', 'bg-red-500'];
             return (
               <div
                 key={index}

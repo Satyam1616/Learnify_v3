@@ -1,10 +1,16 @@
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Users, BookOpen, Award, Star, ArrowRight, Bot } from "lucide-react";
+import { CheckCircle, Users, BookOpen, Award, Star, ArrowRight, Bot, ChevronLeft, ChevronRight } from "lucide-react";
 import Layout from "@/components/Layout";
+import PricingPlansSection from "@/components/PricingPlansSection";
+import ReviewsSection from "@/components/ReviewsSection";
+import PartnersSection from "@/components/PartnersSection";
 import { useLocation } from "wouter";
+import { useState, useRef } from "react";
 
 export default function JobBridgeProgramsPage() {
   const [, setLocation] = useLocation();
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
   const programs = [
     {
       title: "Artificial Intelligence",
@@ -80,6 +86,30 @@ export default function JobBridgeProgramsPage() {
     { icon: Award, title: "Industry Certification", description: "Recognized certificates from Learnify Academy" },
     { icon: CheckCircle, title: "Job Assistance", description: "Placement support and career guidance" }
   ];
+
+  const nextSlide = () => {
+    if (currentSlide < programs.length - 1) {
+      setCurrentSlide(currentSlide + 1);
+      scrollToSlide(currentSlide + 1);
+    }
+  };
+
+  const prevSlide = () => {
+    if (currentSlide > 0) {
+      setCurrentSlide(currentSlide - 1);
+      scrollToSlide(currentSlide - 1);
+    }
+  };
+
+  const scrollToSlide = (slideIndex: number) => {
+    if (scrollContainerRef.current) {
+      const slideWidth = scrollContainerRef.current.offsetWidth;
+      scrollContainerRef.current.scrollTo({
+        left: slideIndex * slideWidth,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   return (
     <Layout>
@@ -281,7 +311,8 @@ export default function JobBridgeProgramsPage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Desktop Grid */}
+            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {programs.map((program, index) => (
                 <div
                   key={index}
@@ -368,8 +399,154 @@ export default function JobBridgeProgramsPage() {
                 </div>
               ))}
             </div>
+
+            {/* Mobile Slider */}
+            <div className="md:hidden relative">
+              <div 
+                ref={scrollContainerRef}
+                className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory gap-6 pb-4"
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              >
+                {programs.map((program, index) => (
+                  <div
+                    key={index}
+                    className={`flex-shrink-0 w-80 ${program.special ? 'bg-gradient-to-br from-[hsl(219,79%,37%)] to-[hsl(217,91%,60%)] text-white' : 'bg-white border border-gray-200'} rounded-2xl overflow-hidden shadow-lg hover-lift group cursor-pointer snap-start`}
+                    onClick={() => setLocation(program.special ? `/blu-mentor` : `/job-bridge/${program.slug}`)}
+                  >
+                    <div className="relative overflow-hidden">
+                      {program.special ? (
+                        <div className="h-48 flex items-center justify-center bg-gradient-to-br from-white/10 to-white/20 relative">
+                          <div className="absolute inset-0 bg-gradient-to-br from-cyan-300/20 to-blue-300/20 animate-pulse"></div>
+                          {program.icon && <program.icon className="h-20 w-20 text-white/90 animate-breathing-glow" />}
+                          <div className="absolute top-4 left-4">
+                            <div className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-sm font-semibold text-white">
+                              AI Powered
+                            </div>
+                          </div>
+                        </div>
+                      ) : (
+                        <img
+                          src={program.image}
+                          alt={program.title}
+                          className="w-full h-48 object-cover group-hover:scale-105 smooth-transition"
+                        />
+                      )}
+                      {!program.special && (
+                        <div className="absolute top-4 right-4">
+                          <div className="bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-semibold text-gray-900">
+                            {program.duration}
+                          </div>
+                        </div>
+                      )}
+                      {program.special && (
+                        <div className="absolute top-4 right-4">
+                          <div className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-sm font-semibold text-white">
+                            {program.duration}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="p-6">
+                      <h3 className={`text-xl font-bold mb-2 ${program.special ? 'text-white' : 'text-gray-900'}`}>
+                        {program.title}
+                      </h3>
+                      {program.special && program.tagline ? (
+                        <p className="text-white/90 mb-4 text-sm leading-relaxed">{program.tagline}</p>
+                      ) : (
+                        <p className={`mb-4 text-sm ${program.special ? 'text-white/90' : 'text-gray-600'}`}>{program.level}</p>
+                      )}
+
+                      <div className="mb-6">
+                        <div className={`text-2xl font-bold mb-4 ${program.special ? 'text-white' : 'text-[hsl(219,79%,37%)]'}`}>
+                          {program.price}
+                        </div>
+
+                        <ul className="space-y-2">
+                          {program.features.slice(0, 4).map((feature, featureIndex) => (
+                            <li key={featureIndex} className={`flex items-center text-sm ${program.special ? 'text-white/90' : 'text-gray-600'}`}>
+                              <CheckCircle className={`h-4 w-4 mr-2 flex-shrink-0 ${program.special ? 'text-white/90' : 'text-green-500'}`} />
+                              {feature}
+                            </li>
+                          ))}
+                          {program.features.length > 4 && (
+                            <p className={`text-xs ${program.special ? 'text-white/70' : 'text-gray-500'} text-center`}>
+                              +{program.features.length - 4} more features
+                            </p>
+                          )}
+                        </ul>
+                      </div>
+
+                      <Button
+                        className={`w-full group text-sm ${program.special
+                          ? 'bg-white text-[hsl(219,79%,37%)] hover:bg-gray-100'
+                          : 'bg-[hsl(219,79%,37%)] text-white hover:bg-[hsl(217,91%,60%)]'
+                          }`}
+                        onClick={e => {
+                          e.stopPropagation();
+                          setLocation(program.special ? `/blu-mentor` : `/job-bridge/${program.slug}`);
+                        }}
+                      >
+                        {program.special ? 'Meet Blu' : 'Enroll Now'}
+                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      </Button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Mobile Navigation Arrows */}
+              <button
+                onClick={prevSlide}
+                disabled={currentSlide === 0}
+                className={`absolute left-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center transition-all z-10 ${
+                  currentSlide === 0
+                    ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                    : 'bg-white shadow-lg text-gray-700 hover:bg-gray-50'
+                }`}
+              >
+                <ChevronLeft className="h-5 w-5" />
+              </button>
+              
+              <button
+                onClick={nextSlide}
+                disabled={currentSlide === programs.length - 1}
+                className={`absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center transition-all z-10 ${
+                  currentSlide === programs.length - 1
+                    ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                    : 'bg-white shadow-lg text-gray-700 hover:bg-gray-50'
+                }`}
+              >
+                <ChevronRight className="h-5 w-5" />
+              </button>
+
+              {/* Mobile Slide Indicators */}
+              <div className="flex justify-center mt-6 gap-2">
+                {programs.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => {
+                      setCurrentSlide(index);
+                      scrollToSlide(index);
+                    }}
+                    className={`w-2 h-2 rounded-full transition-all ${
+                      index === currentSlide ? 'bg-blue-500 w-6' : 'bg-gray-300'
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </section>
+
+        {/* Pricing Plans */}
+        <PricingPlansSection />
+
+        {/* Reviews */}
+        <ReviewsSection />
+
+        {/* Partners */}
+        <PartnersSection />
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-gray-900 to-[hsl(219,79%,37%)] text-white">

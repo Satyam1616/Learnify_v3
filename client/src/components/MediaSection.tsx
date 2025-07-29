@@ -1,3 +1,5 @@
+import ContactForm from "@/components/ContactForm";
+
 export default function MediaSection() {
   const mediaOutlets = [
     "Google News", "Yahoo News", "Business Standard", "The Print",
@@ -52,123 +54,41 @@ export default function MediaSection() {
 // Contact Form Component
 export function ContactFormSection() {
   return (
-    <section className="py-20 bg-gray-900 text-white relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-32 h-32 border-2 border-blue-400 rounded-full animate-pulse-slow"></div>
-        <div className="absolute bottom-20 right-20 w-24 h-24 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full animate-float"></div>
-      </div>
-
+    <section className="py-12 sm:py-16 lg:py-20 bg-gray-900 text-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           {/* Left side - Contact info */}
-          <div className="animate-slide-up">
-            <div className="mb-8">
-              <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                Learnify Now!
+          <div className="animate-slide-up order-2 lg:order-1">
+            <div className="mb-6 sm:mb-8">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
+                Start Your Journey
               </h2>
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-blue-300 mb-4">
-                  Learnify endless opportunities
+              <div className="space-y-3 sm:space-y-4">
+                <h3 className="text-lg sm:text-xl font-semibold text-orange-400 mb-3 sm:mb-4">
+                  Transform your career today
                 </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Join 1 lakh+ today and access AI-powered learning, expert mentorship, and dedicated placements.
+                <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed">
+                  Join thousands of students who have already transformed their careers with our expert mentorship and industry-relevant programs.
                 </p>
               </div>
             </div>
-
-            <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                <span className="text-gray-300">support@learnify.com</span>
+            <div className="space-y-3 sm:space-y-4">
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-orange-400 rounded-full flex-shrink-0 mt-2"></div>
+                <span className="text-sm sm:text-base text-gray-300">support@learnify.com</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                <span className="text-gray-300">
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-orange-400 rounded-full flex-shrink-0 mt-2"></div>
+                <span className="text-sm sm:text-base text-gray-300 leading-relaxed">
                   Head Hub: 17th Cross Road, Sector 4, HSR Layout, Bengaluru, Karnataka 560102
                 </span>
               </div>
             </div>
           </div>
-
           {/* Right side - Contact form */}
-          <div className="animate-slide-up" style={{ animationDelay: '0.3s' }}>
-            <div className="bg-gray-800 rounded-2xl p-8 shadow-2xl border border-gray-700">
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Full Name
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                      placeholder="Enter your full name"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                      placeholder="91+"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                    placeholder="Enter your email"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-3">
-                    Programs Interested In
-                  </label>
-                  <div className="grid md:grid-cols-2 gap-3">
-                    <label className="flex items-center space-x-3 cursor-pointer">
-                      <input
-                        type="checkbox"
-                        className="w-4 h-4 text-blue-500 bg-gray-700 border-gray-600 rounded focus:ring-blue-500 focus:ring-2"
-                      />
-                      <span className="text-gray-300">Online Learning</span>
-                    </label>
-                    <label className="flex items-center space-x-3 cursor-pointer">
-                      <input
-                        type="checkbox"
-                        className="w-4 h-4 text-blue-500 bg-gray-700 border-gray-600 rounded focus:ring-blue-500 focus:ring-2"
-                      />
-                      <span className="text-gray-300">Bootcamp Program</span>
-                    </label>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    rows={4}
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
-                    placeholder="Write your message..."
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-800"
-                >
-                  Send Message
-                </button>
-              </form>
+          <div className="animate-slide-up order-1 lg:order-2" style={{ animationDelay: '0.3s' }}>
+            <div className="bg-gray-800 rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-2xl border border-gray-700">
+              <ContactForm />
             </div>
           </div>
         </div>

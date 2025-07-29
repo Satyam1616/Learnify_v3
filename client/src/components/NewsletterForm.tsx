@@ -11,7 +11,7 @@ export default function NewsletterForm() {
 
   const newsletterMutation = useMutation({
     mutationFn: (data: { email: string }) => 
-      apiRequest("/api/newsletter", "POST", data),
+      apiRequest("POST", "/api/newsletter", data),
     onSuccess: () => {
       toast({
         title: "Success!",
@@ -67,7 +67,7 @@ export default function NewsletterForm() {
         />
         <Button 
           type="submit"
-          className="w-full bg-gradient-to-r from-blue-600 to-blue-800 text-white hover:from-blue-700 hover:to-blue-900"
+          className="w-full bg-gradient-to-r from-orange-600 to-orange-800 text-white hover:from-orange-700 hover:to-orange-900"
           disabled={newsletterMutation.isPending}
         >
           {newsletterMutation.isPending ? "Subscribing..." : "Submit"}

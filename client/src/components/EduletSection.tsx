@@ -44,14 +44,14 @@ export default function EduletSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           {/* Text Content - slides in from left and goes behind tablet */}
           <div className={`space-y-8 relative z-10 transition-all duration-1000 ease-out ${textVisible
-              ? 'transform translate-x-0 opacity-100'
-              : 'transform -translate-x-full opacity-0'
+            ? 'transform translate-x-0 opacity-100'
+            : 'transform -translate-x-full opacity-0'
             }`}>
             <div className="space-y-6">
               <div>
                 <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight mb-4">
                   <span className="text-black">Edu-let - </span>
-                  <span className="text-[hsl(219,79%,37%)]">India's First<br />
+                  <span className="text-[hsl(25,95%,53%)]">India's First<br />
                     Educational Tablet</span>
                 </h2>
               </div>
@@ -59,7 +59,7 @@ export default function EduletSection() {
                 Every Learnify learner receives a dedicated education tablet, providing seamless, distraction-free learning. With 24/7 access to course materials, Learnify Academy's tablet ensures enhanced focus and immersive engagement, redefining the future of online education.
               </p>
             </div>
-            <Button className="w-full sm:w-auto bg-[hsl(219,79%,37%)] text-white px-8 py-4 rounded-xl font-semibold text-base sm:text-lg hover:bg-[hsl(217,91%,60%)] transform hover:scale-105 transition-all duration-300">
+            <Button className="w-full sm:w-auto bg-[hsl(25,95%,53%)] text-white px-8 py-4 rounded-xl font-semibold text-base sm:text-lg hover:bg-[hsl(35,95%,60%)] transform hover:scale-105 transition-all duration-300">
               Learn More
             </Button>
           </div>
@@ -69,7 +69,7 @@ export default function EduletSection() {
               {/* Tablet mockup */}
               <div className="bg-gray-900 rounded-2xl p-2 sm:p-4">
                 {/* Interactive screen */}
-                <div className="bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl p-4 sm:p-6 mb-4 relative min-h-[180px] sm:min-h-[250px] flex items-center justify-center">
+                <div className="bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl p-4 sm:p-6 mb-4 relative min-h-[180px] sm:min-h-[250px] flex items-center justify-center">
                   <div className="text-center">
                     <div className="w-12 h-12 sm:w-20 sm:h-20 bg-white rounded-full mx-auto mb-4 flex items-center justify-center">
                       <div className="w-0 h-0 border-l-4 border-r-4 border-b-6 sm:border-l-8 sm:border-r-8 sm:border-b-12 border-transparent border-b-white"></div>
