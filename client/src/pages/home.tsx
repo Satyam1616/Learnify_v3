@@ -8,6 +8,7 @@ import LearningModules from "@/components/LearningModules";
 import StudyAbroadSection from "@/components/StudyAbroadSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { ContactFormSection } from "@/components/MediaSection";
+import HomePageSwitcher from "@/components/HomePageSwitcher";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <StudyAbroadSection />
       <TestimonialsSection />
       <ContactFormSection />
+      <HomePageSwitcher />
     </Layout>
   );
 }

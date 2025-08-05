@@ -1,6 +1,8 @@
 import { Star, ThumbsUp, MessageCircle, Filter, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
+import { FadeInUp, FadeInLeft, FadeInRight, StaggerContainer, StaggerItem, ScaleOnHover } from "@/components/animations";
+import CardSlider from "@/components/sliders/CardSlider";
 
 export default function ReviewsSection() {
   const [selectedFilter, setSelectedFilter] = useState("all");
@@ -160,19 +162,19 @@ export default function ReviewsSection() {
     <section className="py-16 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <FadeInUp className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             What Our Students Say
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Real reviews from real students who have transformed their careers with our courses.
           </p>
-        </div>
+        </FadeInUp>
 
         {/* Desktop Layout */}
         <div className="hidden lg:grid lg:grid-cols-4 gap-8">
           {/* Left Sidebar - Stats & Filters */}
-          <div className="lg:col-span-1">
+          <FadeInLeft className="lg:col-span-1">
             {/* Overall Rating */}
             <div className="bg-gray-50 rounded-2xl p-6 mb-6">
               <div className="text-center mb-6">
@@ -229,16 +231,21 @@ export default function ReviewsSection() {
                 ))}
               </div>
             </div>
-          </div>
+          </FadeInLeft>
 
           {/* Right Content - Reviews */}
-          <div className="lg:col-span-3">
-            <div className="space-y-6">
-              {displayedReviews.map((review) => (
-                <div
-                  key={review.id}
-                  className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow"
-                >
+          <FadeInRight className="lg:col-span-3">
+            <CardSlider
+              slidesToShow={{ mobile: 1, tablet: 1, desktop: 1 }}
+              showArrows={true}
+              showDots={true}
+              autoPlay={true}
+              autoPlayInterval={6000}
+            >
+              {reviews.map((review) => (
+                <ScaleOnHover key={review.id}>
+                  <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow h-full"
+                  >
                   {/* Review Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center">
@@ -300,43 +307,32 @@ export default function ReviewsSection() {
                       Reply
                     </button>
                   </div>
-                </div>
+                  </div>
+                </ScaleOnHover>
               ))}
-            </div>
-
-            {/* Load More Button */}
-            {!showAllReviews && (
-              <div className="text-center mt-8">
-                <Button
-                  onClick={() => setShowAllReviews(true)}
-                  variant="outline"
-                  className="border-gray-300 text-gray-700 hover:bg-gray-50"
-                >
-                  <ChevronDown className="h-4 w-4 mr-2" />
-                  Show More Reviews
-                </Button>
-              </div>
-            )}
+            </CardSlider>
 
             {/* Write Review CTA */}
-            <div className="mt-12 bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl p-8 text-center">
+            <FadeInUp delay={0.3} className="mt-12 bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl p-8 text-center">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 Share Your Experience
               </h3>
               <p className="text-gray-600 mb-6">
                 Help other students by sharing your learning journey and course experience.
               </p>
-              <Button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white">
-                Write a Review
-              </Button>
-            </div>
-          </div>
+              <ScaleOnHover>
+                <Button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white">
+                  Write a Review
+                </Button>
+              </ScaleOnHover>
+            </FadeInUp>
+          </FadeInRight>
         </div>
 
         {/* Mobile Layout with Slider */}
         <div className="lg:hidden">
           {/* Mobile Stats Summary */}
-          <div className="bg-gray-50 rounded-2xl p-6 mb-8">
+          <FadeInUp className="bg-gray-50 rounded-2xl p-6 mb-8">
             <div className="text-center">
               <div className="text-3xl font-bold text-gray-900 mb-2">
                 {stats.averageRating}
@@ -346,10 +342,10 @@ export default function ReviewsSection() {
                 Based on {stats.totalReviews.toLocaleString()} reviews
               </p>
             </div>
-          </div>
+          </FadeInUp>
 
           {/* Mobile Filters */}
-          <div className="flex gap-2 mb-6 overflow-x-auto pb-2">
+          <FadeInUp delay={0.2} className="flex gap-2 mb-6 overflow-x-auto pb-2">
             {filters.slice(0, 4).map((filter) => (
               <button
                 key={filter.id}
@@ -363,20 +359,21 @@ export default function ReviewsSection() {
                 {filter.label}
               </button>
             ))}
-          </div>
+          </FadeInUp>
 
           {/* Mobile Reviews Slider */}
-          <div className="relative">
-            <div 
-              ref={scrollContainerRef}
-              className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory gap-4 pb-4"
-              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          <FadeInUp delay={0.4}>
+            <CardSlider
+              slidesToShow={{ mobile: 1, tablet: 1, desktop: 1 }}
+              showArrows={true}
+              showDots={true}
+              autoPlay={true}
+              autoPlayInterval={5000}
             >
               {reviews.map((review) => (
-                <div
-                  key={review.id}
-                  className="flex-shrink-0 w-full sm:w-80 bg-white border border-gray-200 rounded-2xl p-6 snap-start"
-                >
+                <ScaleOnHover key={review.id}>
+                  <div className="bg-white border border-gray-200 rounded-2xl p-6 h-full"
+                  >
                   {/* Review Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center">
@@ -438,64 +435,26 @@ export default function ReviewsSection() {
                       Reply
                     </button>
                   </div>
-                </div>
+                  </div>
+                </ScaleOnHover>
               ))}
-            </div>
-
-            {/* Mobile Navigation Arrows */}
-            <button
-              onClick={prevSlide}
-              disabled={currentSlide === 0}
-              className={`absolute left-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center transition-all ${
-                currentSlide === 0
-                  ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                  : 'bg-white shadow-lg text-gray-700 hover:bg-gray-50'
-              }`}
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </button>
-            
-            <button
-              onClick={nextSlide}
-              disabled={currentSlide === reviews.length - 1}
-              className={`absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center transition-all ${
-                currentSlide === reviews.length - 1
-                  ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                  : 'bg-white shadow-lg text-gray-700 hover:bg-gray-50'
-              }`}
-            >
-              <ChevronRight className="h-5 w-5" />
-            </button>
-          </div>
-
-          {/* Mobile Slide Indicators */}
-          <div className="flex justify-center mt-6 gap-2">
-            {reviews.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => {
-                  setCurrentSlide(index);
-                  scrollToSlide(index);
-                }}
-                className={`w-2 h-2 rounded-full transition-all ${
-                  index === currentSlide ? 'bg-orange-500 w-6' : 'bg-gray-300'
-                }`}
-              />
-            ))}
-          </div>
+            </CardSlider>
+          </FadeInUp>
 
           {/* Mobile Write Review CTA */}
-          <div className="mt-12 bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl p-6 text-center">
+          <FadeInUp delay={0.6} className="mt-12 bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl p-6 text-center">
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               Share Your Experience
             </h3>
             <p className="text-gray-600 mb-4 text-sm">
               Help other students by sharing your learning journey.
             </p>
-            <Button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white text-sm px-6 py-2">
-              Write a Review
-            </Button>
-          </div>
+            <ScaleOnHover>
+              <Button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white text-sm px-6 py-2">
+                Write a Review
+              </Button>
+            </ScaleOnHover>
+          </FadeInUp>
         </div>
       </div>
     </section>

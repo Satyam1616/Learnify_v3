@@ -1,8 +1,34 @@
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 
-export default function TestimonialsSection() {
+interface ThemedTestimonialsSectionProps {
+  theme: 'purple' | 'teal' | 'rose' | 'emerald' | 'amber' | 'indigo';
+}
+
+const themeConfig = {
+  purple: {
+    dotActive: 'bg-purple-400'
+  },
+  teal: {
+    dotActive: 'bg-teal-400'
+  },
+  rose: {
+    dotActive: 'bg-rose-400'
+  },
+  emerald: {
+    dotActive: 'bg-emerald-400'
+  },
+  amber: {
+    dotActive: 'bg-amber-400'
+  },
+  indigo: {
+    dotActive: 'bg-indigo-400'
+  }
+};
+
+export default function ThemedTestimonialsSection({ theme }: ThemedTestimonialsSectionProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const config = themeConfig[theme];
   
   const testimonials = [
     {
@@ -112,7 +138,7 @@ export default function TestimonialsSection() {
                   key={index}
                   onClick={() => setCurrentSlide(index)}
                   className={`w-2 h-2 rounded-full transition-colors ${
-                    index === currentSlide ? 'bg-yellow-400' : 'bg-gray-600'
+                    index === currentSlide ? config.dotActive : 'bg-gray-600'
                   }`}
                 />
               ))}

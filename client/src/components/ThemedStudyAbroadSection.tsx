@@ -1,7 +1,40 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, ArrowRight } from "lucide-react";
 
-export default function StudyAbroadSection() {
+interface ThemedStudyAbroadSectionProps {
+  theme: 'purple' | 'teal' | 'rose' | 'emerald' | 'amber' | 'indigo';
+}
+
+const themeConfig = {
+  purple: {
+    bulletColor: 'bg-purple-500',
+    primaryButton: 'from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700'
+  },
+  teal: {
+    bulletColor: 'bg-teal-500',
+    primaryButton: 'from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700'
+  },
+  rose: {
+    bulletColor: 'bg-rose-500',
+    primaryButton: 'from-rose-500 to-rose-600 hover:from-rose-600 hover:to-rose-700'
+  },
+  emerald: {
+    bulletColor: 'bg-emerald-500',
+    primaryButton: 'from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700'
+  },
+  amber: {
+    bulletColor: 'bg-amber-500',
+    primaryButton: 'from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700'
+  },
+  indigo: {
+    bulletColor: 'bg-indigo-500',
+    primaryButton: 'from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700'
+  }
+};
+
+export default function ThemedStudyAbroadSection({ theme }: ThemedStudyAbroadSectionProps) {
+  const config = themeConfig[theme];
+  
   const destinations = [
     {
       country: "Canada",
@@ -44,25 +77,25 @@ export default function StudyAbroadSection() {
             
             <div className="space-y-3 sm:space-y-4">
               <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
+                <div className={`w-2 h-2 ${config.bulletColor} rounded-full flex-shrink-0`}></div>
                 <span className="text-sm sm:text-base text-gray-700">Personalized university matching</span>
               </div>
               <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
+                <div className={`w-2 h-2 ${config.bulletColor} rounded-full flex-shrink-0`}></div>
                 <span className="text-sm sm:text-base text-gray-700">Visa assistance and documentation</span>
               </div>
               <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
+                <div className={`w-2 h-2 ${config.bulletColor} rounded-full flex-shrink-0`}></div>
                 <span className="text-sm sm:text-base text-gray-700">Scholarship guidance</span>
               </div>
               <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
+                <div className={`w-2 h-2 ${config.bulletColor} rounded-full flex-shrink-0`}></div>
                 <span className="text-sm sm:text-base text-gray-700">Pre-departure support</span>
               </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-semibold text-sm sm:text-base">
+              <Button className={`bg-gradient-to-r ${config.primaryButton} text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-semibold text-sm sm:text-base`}>
                 Start Your Journey
                 <ArrowRight className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
               </Button>
