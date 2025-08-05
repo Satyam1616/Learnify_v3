@@ -7,7 +7,7 @@ This document provides a comprehensive breakdown of AI assistance used throughou
 - **Project Name**: Learnify v3 - Modern Learning Platform
 - **Total Development Time**: ~40 hours
 - **AI Assistance Level**: High (70% AI-assisted, 30% manual development)
-- **Primary AI Tool**: Claude 3.5 Sonnet (Anthropic)
+- **Primary AI Tool**: Claude 3.5 Sonnet (Anthropic) and laude 4 Sonnet
 
 ## 🎯 Development Breakdown
 
